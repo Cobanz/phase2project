@@ -1,0 +1,1 @@
+// item cards them self maybe do a front back 
