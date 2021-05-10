@@ -4,7 +4,7 @@ import React from 'react'
 
 class SortingContainer extends React.Component {
     render() {
-        return
+        return(<></>)
     }
 }
 export default SortingContainer

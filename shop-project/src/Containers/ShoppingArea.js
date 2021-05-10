@@ -4,7 +4,8 @@ import React from 'react'
 
 class ShoppingArea extends React.Component {
     render() {
-        return
+        return(<></>
+            )
     }
 }
 export default ShoppingArea

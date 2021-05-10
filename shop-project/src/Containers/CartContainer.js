@@ -4,7 +4,7 @@ import React from 'react'
 
 class CartContainer extends React.Component {
     render() {
-        return
+        return(<></>)
     }
 }
 export default CartContainer
