@@ -10,8 +10,16 @@ class ItemCards extends React.Component {
         <div className="card" id={this.props.item.id}> 
         <h3 className="itemName">{this.props.item.name}</h3>
         <img className="itemImage" src={this.props.item.image} alt={this.props.item.name}></img>
-        <p className="itemDescription">{this.props.item.description}</p>
-        <button className="addToCart">+ to cart</button>
+        <p className="stock">in stock : {this.props.item.quantity}</p>
+        <p className="itemDescription"> item description : {this.props.item.description}</p>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+
+        </select>
+        <button className="addToCart" onClick={this.props.addToCart}>+ to cart</button>
         
         </div>
         

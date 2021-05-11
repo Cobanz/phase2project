@@ -5,14 +5,16 @@ import React from 'react'
 
 class ShoppingArea extends React.Component {
     render() {
-        return(
-        <div className="shoppingArea">
-        {this.props.itemData.map(item => {
-            return <ItemCards item={item} key={item.id} itemId={item.id}/>
-        })}
+        const shop = this.props.itemData.map(item => {
+            return <ItemCards handleClick={this.props.addToCart} item={item} key={item.id} itemId={item.id} />
+        })
+        return (
 
-        </div>
-            );
+            <div className="shoppingArea"> Inventory {shop}
+
+            </div>
+
+        );
     }
 }
 export default ShoppingArea

@@ -9,22 +9,22 @@ import React from "react";
 class App extends React.Component {
 
   state = {
-    items : [],
-    cart : [],
-    filter : {
-      type : 'all'
+    items: [],
+    cart: [],
+    filter: {
+      type: 'all'
     },
   }
 
   componentDidMount() {
-  fetch('http://localhost:3001/items')
-    .then(res => res.json())
-    .then(shopData => this.handleData(shopData))
+    fetch('http://localhost:3001/items')
+      .then(res => res.json())
+      .then(shopData => this.handleData(shopData))
   }
 
-  handleData = (shopData) =>{
+  handleData = (shopData) => {
     this.setState({
-      items:shopData
+      items: shopData
     })
   }
 
@@ -39,20 +39,33 @@ class App extends React.Component {
       .then(res => res.json())
       .then(filteredItem => this.setState({ items: filteredItem }))
 
-    }
+  }
 
-    onChangeType = ({ target: { value } }) => {
-      this.setState({ filter: { type: value } })
+  onChangeType = ({ target: { value } }) => {
+    this.setState({ filter: { type: value } })
+  }
+
+  addToCart = (clickedItem) => {
+    console.log("pick me pick me")
+    if (!this.state.cart.find(alreadyClickedItem => clickedItem === alreadyClickedItem))
+      this.setState({ cart: [...this.state.cart, clickedItem] })
+
+  }
+
+  removeFromCart = (clickedItem) => {
+    console.log("fine i dont like you anyway")
+    this.setState({ cart: this.state.myArmy.filter(oldItem => oldItem !== clickedItem)})
   }
 
 
-render() {
-  return (
-  <div className="app">
-    <div className ="filter"> <SortingContainer filterItem={this.filterItem} onChangeType={this.onChangeType}/></div>
-    <div className ="shop"><ShoppingArea itemData={this.state.items} /></div>
-    <div className ="cart"><CartContainer/></div>
-  </div>);
-}
+  render() {
+    return (
+      <div className="app">
+        <div className="filter"> <SortingContainer filterItem={this.filterItem} onChangeType={this.onChangeType} /></div>
+        <div className="shop"><ShoppingArea itemData={this.state.items} addToCart={this.addToCart} /></div>
+        <div className="cart"><CartContainer removeFromCart={this.removeFromCart} itemData={this.state.items} /></div>
+      </div>);
+  }
 }
 export default App;
+
