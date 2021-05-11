@@ -3,6 +3,10 @@ import ShoppingArea from "./Containers/ShoppingArea"
 import CartContainer from "./Containers/CartContainer"
 import './App.css';
 import React from "react";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import CartConatiner from "./Containers/CartContainer"
+import About from "./Componets/About"
+
 
 
 
@@ -51,21 +55,25 @@ class App extends React.Component {
       this.setState({ cart: [...this.state.cart, clickedItem] })
 
   }
-
-  removeFromCart = (clickedItem) => {
+   
+   removeFromCart = (clickedItem) => {
     console.log("fine i dont like you anyway")
-    this.setState({ cart: this.state.myArmy.filter(oldItem => oldItem !== clickedItem)})
+    this.setState({ cart: this.state.cart.filter(oldItem => oldItem !== clickedItem)})
   }
 
 
   render() {
     return (
+     
       <div className="app">
         <div className="filter"> <SortingContainer filterItem={this.filterItem} onChangeType={this.onChangeType} /></div>
         <div className="shop"><ShoppingArea itemData={this.state.items} addToCart={this.addToCart} /></div>
-        <div className="cart"><CartContainer removeFromCart={this.removeFromCart} itemData={this.state.items} /></div>
+        <div className="cart"><CartContainer removeFromCart={this.removeFromCart} itemData={this.state.cart} /></div>
       </div>);
+
+   
   }
+
 }
 export default App;
 

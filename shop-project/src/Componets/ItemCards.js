@@ -7,7 +7,7 @@ import React from 'react'
 class ItemCards extends React.Component {
     render() {
         return(
-        <div className="card" id={this.props.item.id}> 
+        <div className="card" key={this.props.item.id} id={this.props.item.id}> 
         <h3 className="itemName">{this.props.item.name}</h3>
         <img className="itemImage" src={this.props.item.image} alt={this.props.item.name}></img>
         <p className="stock">in stock : {this.props.item.quantity}</p>
@@ -19,7 +19,7 @@ class ItemCards extends React.Component {
             <option>4</option>
 
         </select>
-        <button className="addToCart" onClick={this.props.addToCart}>+ to cart</button>
+        <button className="addToCart" onClick={()=>this.props.handleClick(this.props.item)}>+ to cart</button>
         
         </div>
         
