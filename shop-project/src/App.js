@@ -1,13 +1,12 @@
-import SortingContainer from "./Containers/SortingContainer"
 import ShoppingArea from "./Containers/ShoppingArea"
 import CartContainer from "./Containers/CartContainer"
 import './App.css';
 import React from "react";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import CartConatiner from "./Containers/CartContainer"
-import About from "./Componets/About"
-
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import About from "./Containers/About"
+import ComeBackOlder from "./Containers/ComeBackOlder"
+import LandingPage from "./Containers/LandingPage"
+import RequestForm from "./Containers/RequestForm"
 
 
 class App extends React.Component {
@@ -55,23 +54,89 @@ class App extends React.Component {
       this.setState({ cart: [...this.state.cart, clickedItem] })
 
   }
-   
-   removeFromCart = (clickedItem) => {
+
+  removeFromCart = (clickedItem) => {
     console.log("fine i dont like you anyway")
-    this.setState({ cart: this.state.cart.filter(oldItem => oldItem !== clickedItem)})
+    this.setState({ cart: this.state.cart.filter(oldItem => oldItem !== clickedItem) })
   }
+
+requestItem = (newItem) => {
+  let postOptions = {
+    method: "POST",
+    headers :{
+      "Content-Type": 'application/json',
+      Accepts: 'application/json'
+    },
+    body: JSON.stringify(newItem)
+  }
+  fetch('http://localhost:3001/items', postOptions)
+  .then(res=>res.json())
+  .then(addedItem => this.setState({items:[...this.state.items, addedItem]}))
+
+}
+
+
 
 
   render() {
     return (
-     
+
       <div className="app">
-        <div className="filter"> <SortingContainer filterItem={this.filterItem} onChangeType={this.onChangeType} /></div>
-        <div className="shop"><ShoppingArea itemData={this.state.items} addToCart={this.addToCart} /></div>
-        <div className="cart"><CartContainer removeFromCart={this.removeFromCart} itemData={this.state.cart} /></div>
+       <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">LandingPage</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/store">Store</Link>
+            </li>
+            <li>
+              <Link to="/notOldEnough">JokesOnYou</Link>
+            </li>
+            <li>
+              <Link to="/cart">Checkout</Link>
+            </li>
+            <li>
+              <Link to="/request">Something Missing?</Link>
+            </li>
+          </ul>
+        </nav>
+
+       
+        <Switch>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/cart">
+          <CartContainer removeFromCart={this.removeFromCart} itemData={this.state.cart} />
+          </Route>
+          <Route exact path="/notOldEnough">
+            <ComeBackOlder />
+          </Route>
+          <Route exact path="/store">
+          <ShoppingArea itemData={this.state.items} addToCart={this.addToCart} filterItem={this.filterItem} onChangeType={this.onChangeType}/>
+          </Route>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+         
+          <Route exact path="/request"> 
+
+            <RequestForm addedItem={this.addedItem}/>
+           
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+        
       </div>);
 
-   
+
   }
 
 }
