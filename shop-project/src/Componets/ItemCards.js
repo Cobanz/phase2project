@@ -19,7 +19,7 @@ class ItemCards extends React.Component {
             <option>4</option>
 
         </select>
-        <button className="addToCart" onClick={()=>this.props.handleClick(this.props.item)}>+ to cart</button>
+        <button className="addToCart" onClick={()=>this.props.handleClick(this.props.item)}>+/- from cart</button>
         
         </div>
         

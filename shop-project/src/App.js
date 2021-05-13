@@ -127,7 +127,7 @@ requestItem = (newItem) => {
          
           <Route exact path="/request"> 
 
-            <RequestForm addedItem={this.addedItem}/>
+            <RequestForm requestItem={this.requestItem}/>
            
           </Route>
         </Switch>

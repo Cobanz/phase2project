@@ -1,52 +1,52 @@
 {
-    "items": [
-      {
-        "id": 1,
-        "name": "Whiskey",
-        "image": "https://images.vexels.com/media/users/3/195780/isolated/lists/42bc2abebcc258fe76549aca70cbeaaf-simple-whisky-bottle.png",
-        "description": "makes me tipsy",
-        "quantity": 2,
-        "type":"Whiskey"
-      },
-      {
-        "id": 2,
-        "name": "Vodka",
-        "image": "https://images.freshop.com/00082000003960/4d37c653a8388beaf96374c73f83b9b2_medium.png",
-        "description": "makes me crazy",
-        "quantity": 1,
-        "type": "Vodka"
-      },
-      {
-        "id": 3,
-        "name": "Gin",
-        "image": "https://entity.works/2T5kRp.png",
-        "description": "makes me grin",
-        "quantity": 4,
-        "type": "Gin"
-      },
-      {
-        "id": 4,
-        "name": "Wine",
-        "image": "https://cdn.iconscout.com/icon/premium/png-256-thumb/glass-29-112065.png",
-        "description": "makes me feel fine",
-        "quantity": 5,
-        "type": "Wine"
-      },
-      {
-        "id": 5,
-        "name": "Tequila",
-        "image": "https://i0.wp.com/novocom.top/image/Y2RuLY291dmljb25zY291dC5jb20=/icon/premium/png-256-thumb/tequila-9-112064.png",
-        "description": "BARF",
-        "quantity": 1,
-        "type": "Tequila"
-      },
-      {
-        "id": 6,
-        "name": "Beer",
-        "image": "https://images.vexels.com/media/users/3/231909/isolated/lists/b951df9b67849add9caff80e7544ed59-glass-of-beer-cut-out.png",
-        "description": "makes me cheer",
-        "quantity": 6,
-        "type": "Beer"
-      }
-    ]
-  }
+  "items": [
+    {
+      "id": 1,
+      "name": "Whiskey",
+      "image": "https://images.vexels.com/media/users/3/195780/isolated/lists/42bc2abebcc258fe76549aca70cbeaaf-simple-whisky-bottle.png",
+      "description": "makes me tipsy",
+      "quantity": 2,
+      "type": "Whiskey"
+    },
+    {
+      "id": 2,
+      "name": "Vodka",
+      "image": "https://images.freshop.com/00082000003960/4d37c653a8388beaf96374c73f83b9b2_medium.png",
+      "description": "makes me crazy",
+      "quantity": 1,
+      "type": "Vodka"
+    },
+    {
+      "id": 3,
+      "name": "Gin",
+      "image": "https://entity.works/2T5kRp.png",
+      "description": "makes me grin",
+      "quantity": 4,
+      "type": "Gin"
+    },
+    {
+      "id": 4,
+      "name": "Wine",
+      "image": "https://cdn.iconscout.com/icon/premium/png-256-thumb/glass-29-112065.png",
+      "description": "makes me feel fine",
+      "quantity": 5,
+      "type": "Wine"
+    },
+    {
+      "id": 5,
+      "name": "Tequila",
+      "image": "https://i0.wp.com/novocom.top/image/Y2RuLY291dmljb25zY291dC5jb20=/icon/premium/png-256-thumb/tequila-9-112064.png",
+      "description": "BARF",
+      "quantity": 1,
+      "type": "Tequila"
+    },
+    {
+      "id": 6,
+      "name": "Beer",
+      "image": "https://images.vexels.com/media/users/3/231909/isolated/lists/b951df9b67849add9caff80e7544ed59-glass-of-beer-cut-out.png",
+      "description": "makes me cheer",
+      "quantity": 6,
+      "type": "Beer"
+    }
+  ]
+}
