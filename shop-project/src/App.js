@@ -84,24 +84,24 @@ requestItem = (newItem) => {
       <div className="app">
        <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
+        <nav className="nav-bar">
+          <ul className="nav-bar-ul">
+            <li className="nav-bar-li a">
               <Link to="/">LandingPage</Link>
             </li>
-            <li>
+            <li className="nav-bar-li a">
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="nav-bar-li a">
               <Link to="/store">Store</Link>
             </li>
-            <li>
+            <li className="nav-bar-li a">
               <Link to="/notOldEnough">JokesOnYou</Link>
             </li>
-            <li>
+            <li className="nav-bar-li a">
               <Link to="/cart">Checkout</Link>
             </li>
-            <li>
+            <li className="nav-bar-li a">
               <Link to="/request">Something Missing?</Link>
             </li>
           </ul>

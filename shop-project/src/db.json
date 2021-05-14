@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Vodka",
-      "image": "https://images.freshop.com/00082000003960/4d37c653a8388beaf96374c73f83b9b2_medium.png",
+      "image": "https://images.vexels.com/media/users/3/236063/isolated/lists/7e7d9f7cf7d9c2e7c8c2369f8197d3b5-alcoholic-beverages-bottles.png",
       "description": "makes me crazy",
       "quantity": 1,
       "type": "Vodka"
@@ -47,14 +47,6 @@
       "description": "makes me cheer",
       "quantity": 6,
       "type": "Beer"
-    },
-    {
-      "name": "Todd",
-      "image": "https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/6101036512836",
-      "description": "qwerqweth",
-      "type": "Vodka",
-      "quantity": "3",
-      "id": 7
     }
   ]
 }

@@ -1,0 +1,98 @@
+body{
+    background-image: url(https://therealbarman.com/wp-content/uploads/2018/08/Bar-Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.nav-bar-ul {  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  
+}
+
+.nav-bar-li {
+    float: left;
+    color: inherit;
+  text-decoration: inherit;
+}
+
+.nav-bar-li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.nav-bar-li.a:hover{
+    background-color: #111;
+}
+
+.card{
+    float:left;
+    right: 30vw;
+    text-align: center;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 2rem 4rem;
+    background-color: rgba(245, 245, 245, 0.158);
+}
+
+.landing-page-picutre{
+    width:60vw;
+}
+
+.about-text{
+    color: whitesmoke;
+}
+
+.about-image{
+    width: 10in;
+}
+
+.filter-name{
+color: whitesmoke;
+}
+
+.ui-form{
+    display: block;
+    text-align: center;
+}
+
+
+.field{  
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.click-me{
+    background-color: whitesmoke;
+}
+
+.request-form-div{
+  background-image: url(https://images.unsplash.com/photo-1597113366853-fea190b6cd82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.add-item-form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+}

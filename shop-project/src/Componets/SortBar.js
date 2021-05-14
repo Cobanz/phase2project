@@ -5,8 +5,8 @@ import React from 'react'
 class SortBar extends React.Component {
     render() {
         return (
-            <div className="ui form">
-                <h3>Alcohol Type</h3>
+            <div className="ui-form">
+                <h3 className="filter-name">Alcohol Type</h3>
                 <div className="field">
                     <select name="type" id="type" onChange={this.props.onChangeType}>
                         <option value="all">All</option>

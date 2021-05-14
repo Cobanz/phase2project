@@ -16,7 +16,7 @@ class ShoppingArea extends React.Component {
 
 
 
-            <div className="shoppingArea"> Inventory 
+            <div className="shoppingArea">
 
             {filter}
             

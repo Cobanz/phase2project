@@ -51,8 +51,8 @@ class RequestForm extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <form className="add-toy-form" onSubmit={this.onSubmit}>
+            <div className="request-form-div">
+                <form className="add-item-form" onSubmit={this.onSubmit}>
                     <h3>Add A Missing Item</h3>
                     <input type="text" name="name" placeholder="Enter a item's name..." className="input-text" onChange={this.onNewName} value={this.state.name} />
                     <br />
