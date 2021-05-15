@@ -1,3 +1,19 @@
+to run on your own
+
+Need to run NPM INSTALL
+
+Need to run NPM START on local host 3000
+
+Need to launch the .JSON start on host 3001 for everything to run correctly 
+
+json-server --watch db.json -p 3001
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
